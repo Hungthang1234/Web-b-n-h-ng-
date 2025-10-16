@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ý kiến khách hàng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   
+    
+    <style>
+    
+  .body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .feedback-form {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    .feedback-form h2 {
+      margin-top: 0;
+    }
+    .email-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .feedback-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .submit-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .header { background-color: black;
+     
+     color: white;
+     font-family: "Helvetica Neue", sans-serif;
+     font-size: 24px;
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 8px;
+     border: 1px solid #666;
+     border-radius: 5px;
+     background-image: url('HinhAnh/BANNER SHOP/bgr.png'); /* Thêm hình ảnh nền */
+     background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh */
+     background-size: cover; 
+ 
+ 
+ }
+ .nav-item {
+           margin-left: 10px;
+       }
+ 
+       .header .nav {
+           margin-left: opx;
+       }
+ 
+       .list-group {
+           font-size: 16px;
+           background-color: rgba(7, 7, 7, 0.993);
+       }
+ 
+ 
+       .carousel-item img {
+           max-height: 300px;
+           width: auto;
+           margin: 0 auto;
+ 
+       }
+ 
+       #thecard {
+           font-size: 10px;
+       }
+ 
+       .title {
+           width: 750px;
+           color: green;
+           font-family: "Helvetica Neue", sans-serif;
+           font-size: 30px;
+           font-weight: bold;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           padding: 5px;
+           /* border: 1px solid #666; */
+           border-radius: 5px;
+           text-align: center;
+       }
+       .footer{ background-color: #333;
+           color: white;
+           font-family: "Helvetica Neue", sans-serif;
+           font-size: 15px;
+           font-weight: bold;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           padding: 6px;
+           border: 1px solid #666;
+           border-radius: 10px;
+ 
+ 
+       }
+       .logo {
+     width: 160px; /* Điều chỉnh chiều rộng của logo */
+     height: auto ; /* Giữ nguyên tỷ lệ khung hình, tự động tính toán chiều cao */
+     border: 2px solid black; /* Tạo viền đen có độ dày 2px */
+    
+   }
+   .search-container {
+   display: flex;
+   align-items: center;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   padding: 5px;
+ }
+ 
+ .search-input {
+   border: none;
+   padding: 5px;
+   width: 550px;
+   border-radius: 5px 0 0 5px;
+ }
+ 
+ .search-button {
+   background-color: #007bff;
+   color: white;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 0 5px 5px 0;
+   cursor: pointer;
+ }
+ a {
+     text-decoration: none; /* Loại bỏ gạch chân */
+     color: #007bff; /* Màu chữ mặc định */
+   }
+   a:hover {
+     text-decoration: underline; /* Gạch chân khi con trỏ chuột qua */
+   }
+   a:active {
+     color: #007bff; /* Màu chữ đóng đinh khi bấm vào */
+   }
+      </style>
+</head>
+<body>
+  <div class="header">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xm-12">
+   
+    <a class="nav-link active" aria-current="page" href="index.html"> <img src="HinhAnh/BANNER SHOP/Neon.png" class ="logo"></a>
+    
+</div>
+   
+        
+
+<div class="search-container">
+    <input type="text" class="search-input" placeholder="Nhập từ khóa...">
+    <button class="search-button">Tìm kiếm</button>
+  </div>
+  <div class="search-results" id="searchResults">
+    <!-- Kết quả tìm kiếm sẽ được hiển thị ở đây -->
+  </div>
+    <div class="dropdown" data-bs-theme="light">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
+            Dịch vụ khách hàng
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight">
+          <li><a class="dropdown-item active" href="index.html">	&#127988; Trang chủ </a></li>
+          <li><a class="dropdown-item" href="login.html">&#128682;Đăng nhập</a></li>
+          <li><a class="dropdown-item" href="signup.html">&#9997; Đăng ký</a></li>
+          <li><a class="dropdown-item" href="giohang.html"> &#128722;Giỏ hàng</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="https://www.facebook.com/thang.hung.58760/"  target="_blank">&#128222; Liên Hệ</a></li>
+          <li><a class="dropdown-item" href="Ykienkhachhang.html"  target="_blank">&#128172; Phản Hồi Khách Hàng</a></li>
+        </ul>
+      </div>
+     
+</div>
+<br>
+  <div class="feedback-form">
+    <h2>Ý kiến khách hàng</h2>
+    <form>
+      <input type="email" class="email-input" placeholder="Nhập địa chỉ email" required>
+      <textarea class="feedback-input" placeholder="Nhập ý kiến của bạn" required></textarea>
+      <button type="submit" class="submit-button">Gửi</button>
+    </form>
+  </div>
+
+      <script>
+        const chatContent = document.getElementById("chatContent");
+        const messageInput = document.getElementById("messageInput");
+        const sendButton = document.getElementById("sendButton");
+    
+        sendButton.addEventListener("click", () => {
+          const message = messageInput.value;
+          if (message.trim() !== "") {
+            appendMessage(message);
+            messageInput.value = "";
+          }
+        });
+    
+        function appendMessage(message) {
+          const messageElement = document.createElement("div");
+          messageElement.classList.add("message");
+          messageElement.textContent = message;
+          chatContent.appendChild(messageElement);
+          chatContent.scrollTop = chatContent.scrollHeight;
+        }
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

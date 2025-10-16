@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+
+    <title>Đăng nhập</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="chucnangcualogin.css">  
+</head>
+<body>
+    <div class="header">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xm-12">
+        <a class="nav-link active" aria-current="page" href="index.html"> Neon Shop </a>
+        </div>
+       
+            </li>
+    
+        </ul> 
+        <div class="dropdown" data-bs-theme="light">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
+                Dịch vụ khách hàng
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight">
+              <li><a class="dropdown-item active" href="index.html">	&#127988; Trang chủ </a></li>
+              <li><a class="dropdown-item" href="login.html">&#128682;Đăng nhập</a></li>
+              <li><a class="dropdown-item" href="signup.html">&#9997; Đăng ký</a></li>
+              <li><a class="dropdown-item" href="giohang.html"> &#128722; Giỏ hàng</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://www.facebook.com/thang.hung.58760/"  target="_blank">&#128222; Liên Hệ</a></li>
+              <li><a class="dropdown-item" href="Ykienkhachhang.html"  target="_blank">&#128172; Phản Hồi Khách Hàng</a></li>
+            </ul>
+          </div>
+    </div>
+        
+        
+    <div class="login-container">
+        <h2>Đăng nhập</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="username">Tên Đăng Nhập:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn-login"  onclick="generateUserID()">Đăng nhập</button>
+        </form>
+        <p>Chưa có tài khoản ?<a href="signup.html">Đăng ký ngay</a></p>
+    <p>Hoặc về <a href="index.html">Trang chủ</a></p>
+</div>
+    </div> <script>
+        function performLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Kiểm tra tên người dùng và mật khẩu (trong thực tế, bạn cần kiểm tra trong cơ sở dữ liệu)
+            if (username === "your_username" && password === "your_password") {
+                // Đăng nhập thành công, chuyển hướng về trang index
+                window.location.href = "index.html";
+            } else {
+                alert("Tên người dùng hoặc mật khẩu không đúng.");
+            }
+        }
+        
+        function generateUserID() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var userID = username + "_" + 'NeonShop';
+            document.getElementById('result').textContent = "Mã định danh: " + userID;
+        }
+    </script>
+    <div>
+        <p>
+
+        </p>
+    </div>
+    <div class ="footer">
+        <div> 
+            &#128222; Liên Hệ &#128222;  <br>
+       Mail : <a href="mailto: nguyenlehungthang16@gmail.com">  nguyenlehungthang16@gmail.com</a><br> 
+       Mail : <a href="mailto: baotho0612@gmail.com"> baotho0612@gmail.com</a><br>
+       Facebook :   <a href ="https://www.facebook.com/thang.hung.58760/" target="_blank"> NanashiYume </a> <br>
+       Facebook :   <a href ="https://www.facebook.com/profile.php?id=100030845282418" target="_blank"> Ẩn Danh Hai </a>
+     </div>
+     <div>
+          Trang web này thuộc quyền sở hữu của <br> 
+         Nguyễn Lê Hùng Thắng 	&#169;<br>
+         Đặng Bảo Thọ 	&#169;
+     </div>
+     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
